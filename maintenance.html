@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+	<meta name="viewport" content="width=900">
+	<script src="js/jquery.js"></script>
+	<style type="text/css">
+        /* 리셋 */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align:baseline;
+        font-family:'NanumGothic';
+    }
+    /*-------리셋------*/
+    html{
+        height:100%;
+    }
+    body {-ms-word-break:keep-all;word-break:keep-all;width:900px;margin:0 auto; background-color:#0173bc; background-image: url('maintenance_ko.png'); background-repeat: no-repeat; background-position: center; background-size:650px auto;}
+    </style>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+$(function(){
+   var language = navigator.languages && navigator.languages[0] || navigator.language || navigator.userLanguage;
+               
+   if(language === "zh-HK" || language === "zh-MO" || language === "zh-TW"){
+   language = "tw";
+   }
+   
+   else if(language === "zh-CN" || language === "zh-SG")
+   {
+   language = "cn";
+   }
+   
+   else{
+   language = language.toLowerCase(); 
+   language = language.substring(0, 2);
+   }
+    if(language == "en"){
+        $('body').css('background-image','url("maintenance_en.png")');
+    }
+    else if(language == "ja"){
+        $('body').css('background-image','url("maintenance_ja.png")');
+    }
+    else if(language == "cn"){
+        $('body').css('background-image','url("maintenance_cn.png")');
+    }
+    else if(language == "tw"){
+        $('body').css('background-image','url("maintenance_tw.png")');
+    }
+    else{
+        $('body').css('background-image','url("maintenance_ko.png")');
+    }
+});
+</script>
+</html>
